@@ -3,13 +3,13 @@ function getIssues() {
   const repo ='kfecho/javascript-fetch-lab'
   const token = getToken()
 
-  fetch('https://api.github.com/repos/${repo}/issues', {
-    headers: {
-      Authorization: `token ${token}`
-    }
-  })
-  .then(res => res.json())
-  .then(json => showIssues(json))
+    fetch(`https://api.github.com/repos/${repo}/issues`, {
+      headers: {
+        Authorization: `token ${token}`
+      }
+    })
+    .then(res => res.json())
+    .then(json => showIssues(json))
 }
 
 function showIssues(json) {
