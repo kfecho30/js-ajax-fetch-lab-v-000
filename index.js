@@ -1,5 +1,3 @@
-const token = getToken();
-
 function getIssues() {
 }
 
