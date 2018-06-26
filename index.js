@@ -6,6 +6,12 @@ function showIssues(json) {
 }
 
 function createIssue() {
+  const repo ='kfecho/javascript-fetch-lab'
+  const data = {
+    title = $('#title').val();
+    body = $('#body').val();
+  }
+  fetch('https://api.github.com/')
 }
 
 function showResults(json) {
