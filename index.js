@@ -3,7 +3,7 @@ function getIssues() {
   const repo ='kfecho30/javascript-fetch-lab'
   const token = getToken()
 
-    fetch(`https://api.github.com/repos/${repo}/issues`, {
+    fetch(`https://api.github.com/repos/${repo}/issues/`, {
       headers: {
         Authorization: `token ${token}`
       }
@@ -26,7 +26,7 @@ function createIssue() {
     body: document.getElementById('body').value
   }
   const token = getToken()
-  fetch('https://api.github.com/repos/${repo}/issues', {
+  fetch('https://api.github.com/repos/${repo}/issues/', {
     method: 'post',
     body: JSON.stringify(data),
     headers: {
