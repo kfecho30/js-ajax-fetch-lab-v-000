@@ -1,6 +1,6 @@
 
 function getIssues() {
-  const repo ='kfecho/javascript-fetch-lab'
+  const repo ='kfecho30/javascript-fetch-lab'
   const token = getToken()
 
     fetch(`https://api.github.com/repos/${repo}/issues`, {
@@ -20,7 +20,7 @@ function showIssues(json) {
 }
 
 function createIssue() {
-  const repo ='kfecho/javascript-fetch-lab'
+  const repo ='kfecho30/javascript-fetch-lab'
   const data = {
     title = $('#title').val()
     body = $('#body').val()
