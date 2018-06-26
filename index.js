@@ -11,7 +11,15 @@ function createIssue() {
     title = $('#title').val();
     body = $('#body').val();
   }
-  fetch('https://api.github.com/')
+  const token = getToken()
+  fetch('https://api.github.com/repos/${repo}/issues', {
+    method: 'post',
+    body: JSON.stringify(data),
+    headers: {
+      Authorization: `token ${token}`
+    }
+  })
+  getIssues()
 }
 
 function showResults(json) {
