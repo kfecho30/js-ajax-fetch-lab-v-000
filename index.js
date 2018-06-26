@@ -22,8 +22,8 @@ function showIssues(json) {
 function createIssue() {
   const repo ='kfecho/javascript-fetch-lab'
   const data = {
-    title = $('#title').val();
-    body = $('#body').val();
+    title = $('#title').val()
+    body = $('#body').val()
   }
   const token = getToken()
   fetch('https://api.github.com/repos/${repo}/issues', {
