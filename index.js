@@ -22,7 +22,7 @@ function showIssues(json) {
 function createIssue() {
   const repo ='kfecho30/javascript-fetch-lab'
   const data = {
-    title = $('#title').val()
+    title = $('#title').val(),
     body = $('#body').val()
   }
   const token = getToken()
