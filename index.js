@@ -18,8 +18,8 @@ function forkRepo() {
     headers: {
       'Authorization': `token ${getToken()}`
     }
-  }).then(resp => let repo = new Repo(resp);
-      $('#results').append(repo.template()));
+  }).then(resp => let repo = new Repo(resp);)
+  $('#results').append(repo.template());
 }
 
 function getToken() {
