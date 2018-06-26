@@ -19,7 +19,7 @@ function forkRepo() {
       Authorization: `token ${getToken()}`
     }
   }).then(resp => let repo = new Repo(resp);
-      showForkedRepo(repo););
+      $('#results').append(repo.template()));
   }
 }
 
