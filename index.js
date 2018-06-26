@@ -1,5 +1,7 @@
 
 function getIssues() {
+  const repo ='kfecho/javascript-fetch-lab'
+  const token = getToken()
 }
 
 function showIssues(json) {
