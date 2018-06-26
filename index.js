@@ -20,7 +20,6 @@ function forkRepo() {
     }
   }).then(resp => let repo = new Repo(resp);
       $('#results').append(repo.template()));
-  }
 }
 
 function getToken() {
