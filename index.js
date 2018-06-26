@@ -9,7 +9,7 @@ function createIssue() {
 }
 
 function showResults(json) {
-  $('#results').html(json);
+  $('#results').append(json);
 }
 
 function forkRepo() {
