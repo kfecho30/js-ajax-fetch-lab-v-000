@@ -9,6 +9,7 @@ function createIssue() {
 }
 
 function showResults(json) {
+  $('#results').html(json);
 }
 
 function forkRepo() {
