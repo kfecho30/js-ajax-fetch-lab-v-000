@@ -16,7 +16,7 @@ function forkRepo() {
   fetch(`https://api.github.com/repos/${repo}/forks`{
     method: 'POST',
     headers: {
-      Authorization: `token ${getToken()}`
+      'Authorization': `token ${getToken()}`
     }
   }).then(resp => let repo = new Repo(resp);
       $('#results').append(repo.template()));
