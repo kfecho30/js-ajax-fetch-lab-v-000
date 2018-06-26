@@ -2,9 +2,21 @@
 function getIssues() {
   const repo ='kfecho/javascript-fetch-lab'
   const token = getToken()
+
+  fetch('https://api.github.com/repos/${repo}/issues', {
+    headers: {
+      Authorization: `token ${token}`
+    }
+  })
+  .then(res => res.json())
+  .then(json => showIssues(json))
 }
 
 function showIssues(json) {
+  const issues = json.map(issue => `<li><b>Title: </b><span>${issue.title}</span><br>
+    <b>URL: </b><span>${issue.html_url}</span><br></li>`)
+
+  $('#issues').html(`<ul>${issues}</ul`)
 }
 
 function createIssue() {
